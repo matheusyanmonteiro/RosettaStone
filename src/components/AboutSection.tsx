@@ -11,13 +11,11 @@ const AboutSection = ({ dict }: { dict: any }) => {
           </h2>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
         </div>
-
         <div className="retro-border p-8 md:p-12 bg-card/80 backdrop-blur-sm">
           <div className="font-mono text-sm text-muted-foreground mb-4">
             <span className="text-secondary">const</span>{" "}
             <span className="text-primary">developer</span> = {"{"}
           </div>
-
           <div className="pl-6 space-y-3 font-mono text-sm">
             <p><span className="text-accent">nome</span>: <span className="text-foreground">"{dict.about.name}"</span>,</p>
             <p><span className="text-accent">localização</span>: <span className="text-foreground">"{dict.about.location}"</span>,</p>
@@ -25,9 +23,7 @@ const AboutSection = ({ dict }: { dict: any }) => {
             <p><span className="text-accent">foco</span>: <span className="text-foreground">"{dict.about.focus}"</span>,</p>
             <p><span className="text-accent">stack_principal</span>: <span className="text-foreground">["Node.js", "TypeScript", "Delphix", "Terraform"]</span></p>
           </div>
-
           <div className="font-mono text-sm text-muted-foreground mt-4">{"}"};</div>
-
           <p className="mt-8 text-foreground/80 text-lg leading-relaxed font-body">
             {dict.about.description}
           </p>

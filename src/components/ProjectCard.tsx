@@ -1,4 +1,3 @@
-// src/components/ProjectCard.tsx
 import { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {

@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 
 const Navbar = ({ dict }: { dict: any }) => {
   const [scrolled, setScrolled] = useState(false);
-  const { lang } = useParams(); // Pega o idioma atual da URL (ex: 'pt' ou 'en')
+  const { lang } = useParams();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -14,11 +14,10 @@ const Navbar = ({ dict }: { dict: any }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Links vindos do dicionário para serem traduzíveis
   const links = [
     { label: dict.nav.about, href: `/${lang}#about` },
     { label: dict.nav.projects, href: `/${lang}#projects` },
-    { label: dict.nav.blog, href: `/${lang}/blog` }, // Link para a página de blog
+    { label: dict.nav.blog, href: `/${lang}/blog` },
     { label: dict.nav.contact, href: `/${lang}#contact` },
   ];
 
@@ -32,7 +31,6 @@ const Navbar = ({ dict }: { dict: any }) => {
         <Link href={`/${lang}`} className="font-display text-lg tracking-wider text-primary glow-cyan">
           {"<DEV/>"}
         </Link>
-        
         <div className="hidden md:flex gap-8">
           {links.map((link) => (
             <Link
@@ -44,8 +42,6 @@ const Navbar = ({ dict }: { dict: any }) => {
             </Link>
           ))}
         </div>
-
-        {/* Badge de Versão Retro */}
         <div className="flex items-center gap-4">
            <div className="text-primary text-[10px] tracking-widest opacity-60 border border-primary/30 px-2 py-0.5">
             v1.0.0

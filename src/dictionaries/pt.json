@@ -4,7 +4,9 @@
     "subtitle": "Engenheiro de Software"
   },
   "blog": {
-    "title": "Artigos e Insights"
+    "title": "Artigos e Insights",
+    "backToBlog": "[ VOLTAR_AO_DUMP_DE_DADOS ]",
+    "backToHome": "[ RETORNAR_AO_CORE ]"
   },
   "projects": [
     {

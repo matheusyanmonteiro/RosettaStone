@@ -1,7 +1,6 @@
 import { Orbitron, Share_Tech_Mono, Rajdhani } from "next/font/google";
 import "../globals.css";
 
-// Configuração das fontes Cyberpunk
 const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["400", "700", "900"],

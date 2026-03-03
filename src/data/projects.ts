@@ -1,5 +1,3 @@
-// src/data/projects.ts
-
 export interface Project {
   title: string;
   description: string;

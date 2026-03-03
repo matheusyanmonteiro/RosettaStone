@@ -1,15 +1,12 @@
-'use client'; // Essencial para usar useEffect e useState
+'use client';
 
 import { useEffect, useState } from "react";
 
-// 1. Adicionamos 'dict' como parâmetro da função
 const HeroSection = ({ dict }: { dict: any }) => {
   const [currentPhrase, setCurrentPhrase] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // 2. Agora usamos as frases que vêm do seu dicionário JSON
-  // Se dict.hero.phrases não existir, ele usa um fallback vazio
   const phrases = dict?.hero?.phrases || [
     "Engenheiro de Software",
     "Especialista em ETL",
@@ -45,21 +42,18 @@ const HeroSection = ({ dict }: { dict: any }) => {
         <p className="font-mono text-secondary text-sm tracking-[0.3em] mb-4 glow-green">
           {">"} SYSTEM.INIT — PORTFOLIO LOADED
         </p>
-
         <h1
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider mb-6 glitch text-primary glow-cyan uppercase"
           data-text="MATHEUS MONTEIRO"
         >
           MATHEUS MONTEIRO
         </h1>
-
         <div className="h-12 flex items-center justify-center">
           <span className="font-mono text-xl md:text-2xl text-foreground">
             {">"} {displayText}
             <span className="animate-pulse text-primary">█</span>
           </span>
         </div>
-
         <div className="mt-12 flex gap-4 justify-center flex-wrap">
           <a
             href="#projects"
@@ -74,6 +68,12 @@ const HeroSection = ({ dict }: { dict: any }) => {
           >
             [ {dict?.home?.downloadCv || 'BAIXAR CV'} ]
           </a>
+        </div>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <span className="font-mono text-[10px] text-primary/50 tracking-[0.3em] uppercase animate-pulse">
+            {dict.hero?.scrollDown || "▼ SCROLL DOWN ▼"}
+          </span>
+        <div className="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent animate-bounce" />
         </div>
       </div>
     </section>

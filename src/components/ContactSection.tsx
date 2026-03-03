@@ -11,12 +11,10 @@ const ContactSection = ({ dict }: { dict: any }) => {
           </h2>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
         </div>
-
         <div className="retro-border p-8 md:p-12 bg-card/80 backdrop-blur-sm">
           <div className="font-mono text-sm text-muted-foreground mb-8">
             <span className="text-secondary">{">"}</span> {dict.contact.subtitle}
           </div>
-
           <div className="space-y-4 font-mono text-sm text-left md:text-center">
             <a href="mailto:matheusyanmonteiro@gmail.com" className="block text-primary hover:glow-cyan transition-all tracking-wider">
               ╠══ EMAIL: matheusyanmonteiro@gmail.com
@@ -29,7 +27,6 @@ const ContactSection = ({ dict }: { dict: any }) => {
             </a>
           </div>
         </div>
-
         <footer className="mt-24 font-mono text-xs text-muted-foreground/40 tracking-widest">
           <p>{"<"}/{">"} BUILT BY MATHEUS — {new Date().getFullYear()}</p>
           <p className="mt-2">[ STATUS: {dict.contact.status} ]</p>
