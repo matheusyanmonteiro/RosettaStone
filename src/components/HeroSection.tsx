@@ -62,7 +62,7 @@ const HeroSection = ({ dict }: { dict: any }) => {
             [ {dict?.home?.viewProjects || 'VER PROJETOS'} ]
           </a>
           <a
-            href="/MYDSA__cv__PT_p_version.pdf"
+            href="/myresume.pdf"
             download
             className="border border-secondary/30 px-8 py-3 font-mono text-sm tracking-widest text-secondary hover:bg-secondary/10 transition-colors duration-300"
           >
