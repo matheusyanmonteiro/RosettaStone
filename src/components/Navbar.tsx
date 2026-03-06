@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = ({ dict }: { dict: any }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,6 +49,7 @@ const Navbar = ({ dict }: { dict: any }) => {
             v1.0.0
           </div>
           <LanguageSwitcher />
+          <ThemeToggle />
         </div>
       </div>
     </nav>

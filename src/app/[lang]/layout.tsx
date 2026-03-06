@@ -1,5 +1,7 @@
 import { Orbitron, Share_Tech_Mono, Rajdhani } from "next/font/google";
 import "../globals.css";
+import { ThemeProvider } from "@/context/ThemeContext";
+import ThemeVisuals from "@/components/ThemeVisuals";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -29,11 +31,14 @@ export default async function RootLayout({
   const { lang } = await params;
 
   return (
-    <html lang={lang} className={`${orbitron.variable} ${shareTech.variable} ${rajdhani.variable}`}>
-      <body className="antialiased">
-        <div className="scanlines" />
-        <div className="crt-flicker" />
-        {children}
+    <html lang={lang} suppressHydrationWarning> 
+      <body className="antialiased overflow-x-hidden font-body bg-background text-foreground">
+        <ThemeProvider>
+          <ThemeVisuals />
+          <div className="relative z-10">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

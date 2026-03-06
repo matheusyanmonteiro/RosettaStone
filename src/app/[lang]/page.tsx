@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import MatrixRain from "@/components/MatrixRain";
+import ThemeVisuals from "@/components/ThemeVisuals"; // Importe o gerenciador
 import { getDictionary } from "@/lib/get-dictionary";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -12,9 +12,12 @@ export default async function Page({ params }: { params: Promise<{ lang: any }> 
 
   return (
     <>
+      {/* O ThemeVisuals cuida do MatrixRain vs NeuromancerBackground internamente */}
+      <ThemeVisuals />
+      
       <Navbar dict={dict} />
-      <MatrixRain />
-      <main className="relative">
+      
+      <main className="relative z-10">
         <HeroSection dict={dict} />
         <AboutSection dict={dict} />
         <ProjectsSection dict={dict} />
