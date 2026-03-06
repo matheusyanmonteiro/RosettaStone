@@ -7,7 +7,7 @@ const ProjectsSection = ({ dict }: { dict: any }) => {
         <div className="flex items-center gap-4 mb-16">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
           <h2 className="font-display text-2xl md:text-3xl tracking-widest text-primary glow-cyan">
-            {`// ${dict.nav.projects.toUpperCase()}`}
+            {`${dict.nav.projects.toUpperCase()}`}
           </h2>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
         </div>
