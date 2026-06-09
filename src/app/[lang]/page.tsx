@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: Promise<{ lang: any }> 
         
 
         <AboutSection dict={dict} />
-        <ProjectsSection dict={dict} />
+        <ProjectsSection />
         
         <section className="container mx-auto px-6 py-10">
           <Terminal dict={dict} lang={lang} />

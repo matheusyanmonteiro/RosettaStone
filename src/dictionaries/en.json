@@ -10,15 +10,6 @@
     "backToBlog": "[ BACK_TO_DATA_DUMP ]",
     "backToHome": "[ RETURN_TO_CORE ]"
   },
-  "projects": [
-    {
-      "title": "ETL Pipeline",
-      "description": "Development of an engine...",
-      "techStack": ["Node.js", "TypeScript"],
-      "category": "Data Engineering",
-      "githubUrl": "https://github.com/..."
-    }
-  ],
   "experience": [
     {
       "company": "Sagres",
@@ -50,7 +41,6 @@
   },
   "nav": {
     "about": "// ABOUT",
-    "projects": "// PROJECTS",
     "blog": "// BLOG",
     "contact": "// CONTACT"
   },

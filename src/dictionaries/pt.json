@@ -10,15 +10,6 @@
     "backToBlog": "[ VOLTAR_AO_DUMP_DE_DADOS ]",
     "backToHome": "[ RETORNAR_AO_CORE ]"
   },
-  "projects": [
-    {
-      "title": "Pipeline de ETL",
-      "description": "Desenvolvimento de um motor...",
-      "techStack": ["Node.js", "TypeScript"],
-      "category": "Data Engineering",
-      "githubUrl": "https://github.com/..."
-    }
-  ],
   "experience": [
     {
       "company": "Sagres",
@@ -50,7 +41,6 @@
   },
   "nav": {
     "about": "// SOBRE",
-    "projects": "// PROJETOS",
     "blog": "// BLOG",
     "contact": "// CONTATO"
   },

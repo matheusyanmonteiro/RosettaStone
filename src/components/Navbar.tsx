@@ -19,7 +19,6 @@ const Navbar = ({ dict }: { dict: any }) => {
 
   const links = [
     { label: dict.nav.about, href: `/${lang}#about` },
-    { label: dict.nav.projects, href: `/${lang}#projects` },
     { label: dict.nav.blog, href: `/${lang}/blog` },
     { label: dict.nav.contact, href: `/${lang}#contact` },
   ];
