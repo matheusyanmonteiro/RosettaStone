@@ -1,7 +1,5 @@
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import ThemeVisuals from "@/components/ThemeVisuals"; // Importe o gerenciador
 import { getDictionary } from "@/lib/get-dictionary";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -12,24 +10,14 @@ export default async function Page({ params }: { params: Promise<{ lang: any }> 
   const dict = await getDictionary(lang);
 
   return (
-    <>
-      <ThemeVisuals />
-      <Navbar dict={dict} />
-      
-      <main className="relative z-10">
-        <HeroSection dict={dict} />
-        
-        
-
-        <AboutSection dict={dict} />
-        <ProjectsSection />
-        
-        <section className="container mx-auto px-6 py-10">
-          <Terminal dict={dict} lang={lang} />
-        </section>
-        
-        <ContactSection dict={dict} />
-      </main>
-    </>
+    <main className="relative z-10">
+      <HeroSection dict={dict} />
+      <AboutSection dict={dict} />
+      <ProjectsSection />
+      <section className="container mx-auto px-6 py-10">
+        <Terminal dict={dict} lang={lang} />
+      </section>
+      <ContactSection dict={dict} />
+    </main>
   );
 }
