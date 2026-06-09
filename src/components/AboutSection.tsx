@@ -21,7 +21,7 @@ const AboutSection = ({ dict }: { dict: any }) => {
             <p><span className="text-accent">localização</span>: <span className="text-foreground">"{dict.about.location}"</span>,</p>
             <p><span className="text-accent">formação</span>: <span className="text-foreground">"Engenharia de Software (UnB)"</span>,</p>
             <p><span className="text-accent">foco</span>: <span className="text-foreground">"{dict.about.focus}"</span>,</p>
-            <p><span className="text-accent">stack_principal</span>: <span className="text-foreground">["Node.js", "TypeScript", "Delphix", "Terraform"]</span></p>
+            <p><span className="text-accent">stack_principal</span>: <span className="text-foreground">["Python", "Node.js", "TypeScript", "Pandas", "Delphix", "DevOps"]</span></p>
           </div>
           <div className="font-mono text-sm text-muted-foreground mt-4">{"}"};</div>
           <p className="mt-8 text-foreground/80 text-lg leading-relaxed font-body">

@@ -1,17 +1,19 @@
 {
   "home": {
-    "title": "Meu Portfólio",
-    "subtitle": "Engenheiro de Software"
+    "title": "SYSTEM_LOADED",
+    "subtitle": "Software Engineer",
+    "viewProjects": "VIEW PROJECTS",
+    "downloadCv": "DOWNLOAD CV"
   },
   "blog": {
-    "title": "Artigos e Insights",
-    "backToBlog": "[ VOLTAR_AO_DUMP_DE_DADOS ]",
-    "backToHome": "[ RETORNAR_AO_CORE ]"
+    "title": "Articles & Insights",
+    "backToBlog": "[ BACK_TO_DATA_DUMP ]",
+    "backToHome": "[ RETURN_TO_CORE ]"
   },
   "projects": [
     {
-      "title": "testing",
-      "description": "Desenvolvimento de um motor...",
+      "title": "ETL Pipeline",
+      "description": "Development of an engine...",
       "techStack": ["Node.js", "TypeScript"],
       "category": "Data Engineering",
       "githubUrl": "https://github.com/..."
@@ -20,55 +22,50 @@
   "experience": [
     {
       "company": "Sagres",
-      "role": "Engenheiro de Software Júnior",
-      "period": "Fev. 2024 — Atual",
-      "description": "Atuação estratégica em Engenharia de Dados, desenvolvendo pipelines de ETL complexos e implementando estratégias de DataOps com foco em virtualização de dados (Delphix) e conformidade com LGPD."
+      "role": "Junior Software Engineer",
+      "period": "Feb 2024 — Present",
+      "description": "Strategic role in Data Engineering, developing complex ETL pipelines and implementing DataOps strategies focused on data virtualization (Delphix) and LGPD compliance."
     },
     {
       "company": "EDOO",
-      "role": "Engenheiro de Software",
-      "period": "Jan. 2023 — Jan. 2024",
-      "description": "Desenvolvimento Fullstack com Node.js e Angular, focado em APIs resilientes e interfaces performáticas, além da liderança técnica em políticas de internacionalização."
+      "role": "Software Engineer",
+      "period": "Jan 2023 — Jan 2024",
+      "description": "Fullstack development with Node.js and Angular, focused on resilient APIs and performant interfaces, plus technical leadership in internationalization policies."
     },
     {
       "company": "Descomplica",
-      "role": "Engenheiro de Software Trainee",
-      "period": "Jul. 2022 — Dez. 2022",
-      "description": "Desenvolvimento ágil utilizando NestJS, React e Terraform em ambiente AWS, focando na otimização de processos de onboarding."
+      "role": "Software Engineer Trainee",
+      "period": "Jul 2022 — Dec 2022",
+      "description": "Agile development using NestJS, React and Terraform in AWS environment, focusing on onboarding process optimization."
     },
     {
       "company": "CONFEA",
-      "role": "Engenheiro de Software Trainee",
-      "period": "Jan. 2021 — Mai. 2022",
-      "description": "Refatoração de sistemas legados para microserviços utilizando .NET 6, C# e arquitetura orientada a eventos com RabbitMQ."
+      "role": "Software Engineer Trainee",
+      "period": "Jan 2021 — May 2022",
+      "description": "Legacy system refactoring to microservices using .NET 6, C# and event-driven architecture with RabbitMQ."
     }
   ],
   "hero": {
-    "phrases": ["Engenheiro de Software", "Especialista em ETL", "Problem Solver"]
+    "phrases": ["Software Engineer", "ETL Specialist", "Problem Solver"]
   },
   "nav": {
-    "about": "// SOBRE",
-    "projects": "// PROJETOS",
+    "about": "// ABOUT",
+    "projects": "// PROJECTS",
     "blog": "// BLOG",
-    "contact": "// CONTATO"
-  },
-  "home": {
-    "title": "SISTEMA_CARREGADO",
-    "viewProjects": "VER PROJETOS",
-    "downloadCv": "BAIXAR CV"
+    "contact": "// CONTACT"
   },
   "about": {
-    "title": "// SOBRE MIM",
+    "title": "// ABOUT ME",
     "name": "Matheus Monteiro",
-    "location": "Brasília, Brasil",
-    "experience": "4+ anos",
-    "focus": "Arquiteturas escaláveis e Engenharia de Dados",
-    "passion": "Transformar fluxos complexos em código elegante",
-    "description": "Engenheiro de Software com sólida experiência em desenvolvimento Fullcycle e Engenharia de Dados. Apaixonado por tecnologia desde a era dos terminais. Foco em reduzir o 'data friction' e garantir alta disponibilidade."
+    "location": "Brasília, Brazil",
+    "experience": "4+ years",
+    "focus": "Data Engineering and Scalable Architectures",
+    "passion": "Turning complex flows into elegant code",
+    "description": "Software Engineer with solid experience in Data Engineering, workflow automation and backend development. Specialized in architecting efficient data pipelines, auditing large volumes of information, and implementing rigorous automated testing to ensure ecosystem integrity. Passionate about technology and focused on reducing data friction, optimizing operational processes and ensuring high availability of complex systems."
   },
   "contact": {
-    "title": "// CONTATO",
-    "subtitle": "Pronto para construir sistemas resilientes juntos?",
-    "status": "SISTEMA ONLINE"
+    "title": "// CONTACT",
+    "subtitle": "Ready to build resilient systems together?",
+    "status": "SYSTEM ONLINE"
   }
 }

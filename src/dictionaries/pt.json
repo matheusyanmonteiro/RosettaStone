@@ -1,7 +1,9 @@
 {
   "home": {
-    "title": "Meu Portfólio",
-    "subtitle": "Engenheiro de Software"
+    "title": "SISTEMA_CARREGADO",
+    "subtitle": "Engenheiro de Software",
+    "viewProjects": "VER PROJETOS",
+    "downloadCv": "BAIXAR CV"
   },
   "blog": {
     "title": "Artigos e Insights",
@@ -52,19 +54,14 @@
     "blog": "// BLOG",
     "contact": "// CONTATO"
   },
-  "home": {
-    "title": "SISTEMA_CARREGADO",
-    "viewProjects": "VER PROJETOS",
-    "downloadCv": "BAIXAR CV"
-  },
   "about": {
     "title": "// SOBRE MIM",
     "name": "Matheus Monteiro",
     "location": "Brasília, Brasil",
     "experience": "4+ anos",
-    "focus": "Arquiteturas escaláveis e Engenharia de Dados",
+    "focus": "Engenharia de Dados e Arquiteturas Escaláveis",
     "passion": "Transformar fluxos complexos em código elegante",
-    "description": "Engenheiro de Software com sólida experiência em desenvolvimento Fullcycle e Engenharia de Dados. Apaixonado por tecnologia desde a era dos terminais. Foco em reduzir o 'data friction' e garantir alta disponibilidade."
+    "description": "Engenheiro de Software com sólida experiência em Engenharia de Dados, automação de fluxos e desenvolvimento backend. Especialista em arquitetar pipelines de dados eficientes, realizar auditorias de grandes volumes de informações e implementar testes automatizados rigorosos para garantir a integridade do ecossistema. Apaixonado por tecnologia e focado em reduzir o data friction, otimizar processos operacionais e garantir a alta disponibilidade de sistemas complexos."
   },
   "contact": {
     "title": "// CONTATO",
