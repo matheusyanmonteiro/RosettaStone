@@ -9,9 +9,11 @@ export default function Terminal({ dict, lang }: { dict: any, lang: string }) {
   const { toggleTheme } = useTheme();
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll para o final do terminal
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    const container = bottomRef.current?.parentElement;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
   }, [history]);
 
   const handleCommand = (e: React.FormEvent) => {

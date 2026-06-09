@@ -20,6 +20,8 @@ interface UserData {
   login: string;
 }
 
+const PER_PAGE = 4;
+
 const languageColors: Record<string, string> = {
   TypeScript: "#3178c6",
   JavaScript: "#f7df1e",
@@ -47,6 +49,11 @@ const ProjectsSection = () => {
   const [userData, setUserData] = useState<UserData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [page, setPage] = useState(1);
+
+  const totalPages = Math.max(1, Math.ceil(repos.length / PER_PAGE));
+  const startIndex = (page - 1) * PER_PAGE;
+  const displayedRepos = repos.slice(startIndex, startIndex + PER_PAGE);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -86,6 +93,10 @@ const ProjectsSection = () => {
     fetchData();
     return () => controller.abort();
   }, []);
+
+  useEffect(() => {
+    setPage(1);
+  }, [repos]);
 
   return (
     <section id="projects" className="relative py-32 px-6 z-10">
@@ -131,7 +142,7 @@ const ProjectsSection = () => {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {repos.map((repo) => {
+          {displayedRepos.map((repo) => {
             const langColor = repo.language
               ? languageColors[repo.language]
               : undefined;
@@ -210,6 +221,26 @@ const ProjectsSection = () => {
             );
           })}
         </div>
+
+        {!loading && !error && totalPages > 1 && (
+          <div className="flex justify-center gap-3 mt-12 font-mono text-sm">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (pageNum) => (
+                <button
+                  key={pageNum}
+                  onClick={() => setPage(pageNum)}
+                  className={`px-3 py-1 border transition-all duration-300 tracking-widest ${
+                    pageNum === page
+                      ? "bg-primary text-background border-primary glow-cyan"
+                      : "border-primary/30 text-primary hover:border-primary hover:bg-primary/10"
+                  }`}
+                >
+                  [ {pageNum} ]
+                </button>
+              )
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("matrix");
+  const [theme, setTheme] = useState<Theme>("neuromancer");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

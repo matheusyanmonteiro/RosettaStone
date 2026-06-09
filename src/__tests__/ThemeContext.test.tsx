@@ -27,25 +27,25 @@ describe('ThemeContext', () => {
     localStorageMock.clear();
   });
 
-  it('defaults to matrix theme', () => {
+  it('defaults to neuromancer theme', () => {
     const { result } = renderUseTheme();
-    expect(result.current.theme).toBe('matrix');
+    expect(result.current.theme).toBe('neuromancer');
   });
 
-  it('toggles between matrix and neuromancer', () => {
+  it('toggles between neuromancer and matrix', () => {
     const { result } = renderUseTheme();
+
+    act(() => {
+      result.current.toggleTheme();
+    });
+
+    expect(result.current.theme).toBe('matrix');
 
     act(() => {
       result.current.toggleTheme();
     });
 
     expect(result.current.theme).toBe('neuromancer');
-
-    act(() => {
-      result.current.toggleTheme();
-    });
-
-    expect(result.current.theme).toBe('matrix');
   });
 
   it('throws error when useTheme is used outside provider', () => {

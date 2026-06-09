@@ -4,7 +4,7 @@ import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
 let locales = ['en', 'pt'];
-let defaultLocale = 'pt';
+let defaultLocale = 'en';
 
 function getLocale(request: NextRequest) {
   const negotiatorHeaders: Record<string, string> = {};
