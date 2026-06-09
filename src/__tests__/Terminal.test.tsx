@@ -2,6 +2,11 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Terminal from '@/components/Terminal';
 
 const mockToggleTheme = vi.fn();
+const mockPush = vi.fn();
+
+vi.mock('next/navigation', () => ({
+  useRouter: () => ({ push: mockPush }),
+}));
 
 vi.mock('@/context/ThemeContext', () => ({
   useTheme: () => ({ toggleTheme: mockToggleTheme }),
@@ -18,6 +23,7 @@ const mockDict = {
 describe('Terminal', () => {
   beforeEach(() => {
     mockToggleTheme.mockClear();
+    mockPush.mockClear();
   });
 
   it('renders with default history', () => {
@@ -34,7 +40,19 @@ describe('Terminal', () => {
     fireEvent.change(input, { target: { value: 'help' } });
     fireEvent.submit(form);
 
-    expect(screen.getByText('AVAILABLE: ABOUT, PROJECTS, THEME, CLEAR')).toBeInTheDocument();
+    expect(screen.getByText('AVAILABLE: ABOUT, THEME, CLEAR, BLOG')).toBeInTheDocument();
+  });
+
+  it('responds to blog command', () => {
+    render(<Terminal dict={mockDict} lang="en" />);
+    const input = screen.getByPlaceholderText('ENTER_COMMAND...');
+    const form = input.closest('form')!;
+
+    fireEvent.change(input, { target: { value: 'blog' } });
+    fireEvent.submit(form);
+
+    expect(screen.getByText('REDIRECTING_TO_BLOG...')).toBeInTheDocument();
+    expect(mockPush).toHaveBeenCalledWith('/en/blog');
   });
 
   it('responds to about command with dictionary description', () => {
@@ -92,6 +110,6 @@ describe('Terminal', () => {
     fireEvent.change(input, { target: { value: 'HELP' } });
     fireEvent.submit(form);
 
-    expect(screen.getByText('AVAILABLE: ABOUT, PROJECTS, THEME, CLEAR')).toBeInTheDocument();
+    expect(screen.getByText('AVAILABLE: ABOUT, THEME, CLEAR, BLOG')).toBeInTheDocument();
   });
 });

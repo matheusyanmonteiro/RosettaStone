@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useTheme } from "@/context/ThemeContext";
 
 export default function Terminal({ dict, lang }: { dict: any, lang: string }) {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<string[]>(["SYSTEM_INIT: SUCCESSFUL", "TYPE 'HELP' FOR COMMANDS"]);
   const { toggleTheme } = useTheme();
+  const router = useRouter();
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,10 +25,14 @@ export default function Terminal({ dict, lang }: { dict: any, lang: string }) {
 
     switch (cmd) {
       case "help":
-        response = "AVAILABLE: ABOUT, PROJECTS, THEME, CLEAR";
+        response = "AVAILABLE: ABOUT, THEME, CLEAR, BLOG";
         break;
       case "about":
-        response = dict.about.description; // Puxa do seu dicionário i18n
+        response = dict.about.description;
+        break;
+      case "blog":
+        router.push(`/${lang}/blog`);
+        response = "REDIRECTING_TO_BLOG...";
         break;
       case "theme":
         toggleTheme();
