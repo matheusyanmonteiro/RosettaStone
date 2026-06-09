@@ -1,13 +1,15 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 
-const HeroSection = ({ dict }: { dict: any }) => {
-  const { lang } = useParams() as { lang: string };
+const HeroSection = ({ dict, lang }: { dict: any; lang: string }) => {
   const [currentPhrase, setCurrentPhrase] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const phrases = dict?.hero?.phrases || [
     "Engenheiro de Software",
@@ -38,6 +40,11 @@ const HeroSection = ({ dict }: { dict: any }) => {
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentPhrase, phrases]);
 
+  const scrollToProjects = () => {
+    const el = document.getElementById("projects");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6">
       <div className="max-w-4xl mx-auto text-center z-10">
@@ -57,12 +64,12 @@ const HeroSection = ({ dict }: { dict: any }) => {
           </span>
         </div>
         <div className="mt-12 flex gap-4 justify-center flex-wrap">
-          <a
-            href="#projects"
-            className="retro-border px-8 py-3 font-mono text-sm tracking-widest text-primary hover:bg-primary/10 transition-colors duration-300 pulse-glow"
+          <button
+            onClick={scrollToProjects}
+            className="retro-border px-8 py-3 font-mono text-sm tracking-widest text-primary hover:bg-primary/10 transition-colors duration-300 pulse-glow cursor-pointer"
           >
             [ {dict?.home?.viewProjects || 'VER PROJETOS'} ]
-          </a>
+          </button>
           <a
             href={lang === "en" ? "/cv/cv-en.pdf" : "/cv/cv-pt.pdf"}
             download

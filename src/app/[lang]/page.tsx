@@ -11,7 +11,7 @@ export default async function Page({ params }: { params: Promise<{ lang: any }> 
 
   return (
     <main className="relative z-10">
-      <HeroSection dict={dict} />
+      <HeroSection dict={dict} lang={lang} />
       <AboutSection dict={dict} />
       <ProjectsSection />
       <section className="container mx-auto px-6 py-10">
